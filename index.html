@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Join Jalwa Games for thrilling online gaming experience with exciting rewards and bonuses">
   
-  <!-- Jalwa Theme CSS -->
-  <link rel="stylesheet" href="jalwa-style-fixed.css">
-  
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,15 +15,44 @@
   <link rel="icon" href="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" type="image/png">
   
   <style>
-    /* Additional inline styles for quick fixes */
+    /* ===== DARKER COLOR SCHEME ===== */
+    :root {
+      --bg-dark: #070A1F;  /* Darker navy blue */
+      --bg-darker: #050817; /* Even darker for contrast */
+      --primary-accent: #00E7D0;
+      --primary-accent-light: #00FFAA;
+      --text-light: #FFFFFF;
+      --text-gray: #CCCCFF;
+    }
+    
     body {
-      background: linear-gradient(135deg, #0B0F2A 0%, #161A42 100%);
+      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-light);
+      margin: 0;
+      padding: 0;
     }
     
+    /* ===== HEADER WITH BUTTONS ===== */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+    
+    .header-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    /* ===== MAIN CONTENT ===== */
     .main-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -46,26 +72,28 @@
       border-radius: 12px;
       margin: 1rem auto;
       box-shadow: 0 10px 20px rgba(0, 231, 208, 0.2);
+      border: 2px solid rgba(0, 231, 208, 0.1);
     }
     
+    /* ===== TYPOGRAPHY ===== */
     .heading {
-      color: #00E7D0;
+      color: var(--primary-accent);
       font-weight: 700;
       margin: 1.5rem 0;
       text-shadow: 0 0 10px rgba(0, 231, 208, 0.3);
     }
     
     .subheading {
-      color: #FFFFFF;
+      color: var(--text-light);
       font-weight: 600;
       margin-bottom: 1.5rem;
-      background: linear-gradient(90deg, #00E7D0, #00FFAA);
+      background: linear-gradient(90deg, var(--primary-accent), var(--primary-accent-light));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     
     .content-text {
-      color: #CCCCFF;
+      color: var(--text-gray);
       line-height: 1.6;
       margin-bottom: 2rem;
       max-width: 800px;
@@ -73,14 +101,7 @@
       margin-right: auto;
     }
     
-    .button-group {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-    
+    /* ===== BUTTONS ===== */
     .btn {
       padding: 12px 30px;
       border-radius: 50px;
@@ -88,12 +109,15 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: all 0.3s ease;
-      min-width: 200px;
+      min-width: 180px;
+      text-align: center;
+      display: inline-block;
+      cursor: pointer;
     }
     
     .btn-primary {
-      background: linear-gradient(90deg, #00E7D0, #00FFAA);
-      color: #0B0F2A;
+      background: linear-gradient(90deg, var(--primary-accent), var(--primary-accent-light));
+      color: var(--bg-dark);
       border: none;
     }
     
@@ -104,8 +128,8 @@
     
     .btn-secondary {
       background: transparent;
-      color: #00E7D0;
-      border: 2px solid #00E7D0;
+      color: var(--primary-accent);
+      border: 2px solid var(--primary-accent);
     }
     
     .btn-secondary:hover {
@@ -113,6 +137,13 @@
       transform: translateY(-3px);
     }
     
+    .btn-sm {
+      padding: 8px 20px;
+      min-width: 120px;
+      font-size: 0.9rem;
+    }
+    
+    /* ===== FOOTER LINKS ===== */
     .footer-links {
       display: flex;
       justify-content: center;
@@ -122,17 +153,27 @@
     }
     
     .footer-link {
-      color: #CCCCFF;
+      color: var(--text-gray);
       font-size: 0.9rem;
       transition: color 0.3s ease;
+      text-decoration: none;
     }
     
     .footer-link:hover {
-      color: #00E7D0;
+      color: var(--primary-accent);
     }
     
-    /* Responsive adjustments */
+    /* ===== RESPONSIVE DESIGN ===== */
     @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      
+      .header-buttons {
+        margin-top: 1rem;
+      }
+      
       .main-container {
         padding: 1rem;
       }
@@ -150,10 +191,17 @@
   </style>
 </head>
 <body>
+  <!-- Header with Login/Register -->
+  <div class="header">
+    <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" alt="Jalwa Games Logo" width="160">
+    <div class="header-buttons">
+      <a href="http://www.jalwagame.com/#/register?invitationCode=311643325987" class="btn btn-secondary btn-sm">Login</a>
+      <a href="http://www.jalwagame.com/#/register?invitationCode=311643325987" class="btn btn-primary btn-sm">Register</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
   <div class="main-container">
-    <!-- Logo -->
-    <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" alt="Jalwa Games Logo" class="logo">
-    
     <!-- Main Banner -->
     <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/banner/Banner_20250609132654h9f7.jpg" alt="Jalwa Games Banner" class="banner">
     

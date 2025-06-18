@@ -1,0 +1,115 @@
+
+/* === Jalwa Color Theme Variables === */
+:root {
+  --primary-color: #00E7D0;
+  --bg-dark: #0B0F2A;
+  --button-orange: #FFA94D;
+  --button-red: #FF6B6B;
+  --text-light: #FFFFFF;
+  --card-bg: #131a3d;
+  --text-dark: #000000;
+}
+
+/* === Global Styles === */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #00c0ac;
+}
+
+/* Buttons */
+button, input[type="submit"], input[type="button"], a.button {
+  background-color: var(--primary-color);
+  color: var(--text-dark);
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover, a.button:hover {
+  background-color: #00c0ac;
+}
+
+/* Custom Action Buttons */
+.withdraw-btn {
+  background: linear-gradient(to right, var(--button-orange), #ff7c4d);
+  color: var(--text-dark);
+}
+.deposit-btn {
+  background: linear-gradient(to right, var(--button-red), #ff4d4d);
+  color: var(--text-dark);
+}
+
+/* Containers & Cards */
+.container, .content, .section, .card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 0 10px rgba(0, 231, 208, 0.2);
+}
+
+/* Flex/Grid layout utility */
+.flex {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Navigation bar */
+.navbar, .top-bar, .site-header {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: 10px 20px;
+}
+.navbar a {
+  color: var(--primary-color);
+  margin-right: 15px;
+}
+
+/* Footer */
+.footer, .site-info {
+  background-color: var(--card-bg);
+  color: var(--text-light);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Glow Text */
+.glow-text {
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .flex {
+    flex-direction: column;
+  }
+}

@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Favicon -->
-  <link rel="icon" href="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" type="image/png">
+  <link rel="icon" href="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" type="image/png" sizes="32x32">
   
   <style>
     /* ===== DARKER COLOR SCHEME ===== */
@@ -61,7 +61,7 @@
     }
     
     .logo {
-      max-width: 320px;
+      width: 200px; /* Increased size */
       margin: 0 auto 2rem;
       display: block;
     }
@@ -113,6 +113,7 @@
       text-align: center;
       display: inline-block;
       cursor: pointer;
+      text-decoration: none; /* Remove underline from all buttons */
     }
     
     .btn-primary {
@@ -141,6 +142,14 @@
       padding: 8px 20px;
       min-width: 120px;
       font-size: 0.9rem;
+    }
+    
+    /* ===== BUTTON GROUP ===== */
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* Added gap between buttons */
+      margin: 2rem 0;
     }
     
     /* ===== FOOTER LINKS ===== */
@@ -181,6 +190,7 @@
       .button-group {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
       }
       
       .btn {
@@ -188,12 +198,30 @@
         max-width: 300px;
       }
     }
+    
+    /* ===== COMPLIANCE FOR ADS ===== */
+    /* Added to help with Google Ads review */
+    .age-restriction {
+      font-size: 0.8rem;
+      color: var(--text-gray);
+      margin-top: 2rem;
+      opacity: 0.8;
+    }
+    
+    .responsible-gaming {
+      font-size: 0.8rem;
+      color: var(--text-gray);
+      margin-top: 1rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   </style>
 </head>
 <body>
   <!-- Header with Login/Register -->
   <div class="header">
-    <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" alt="Jalwa Games Logo" width="160">
+    <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" alt="Jalwa Games Logo" class="logo">
     <div class="header-buttons">
       <a href="http://www.jalwagame.com/#/register?invitationCode=311643325987" class="btn btn-secondary btn-sm">Login</a>
       <a href="http://www.jalwagame.com/#/register?invitationCode=311643325987" class="btn btn-primary btn-sm">Register</a>
@@ -221,6 +249,15 @@
     <div class="button-group">
       <a href="http://www.jalwagame.com/#/register?invitationCode=311643325987" class="btn btn-primary">Register Now</a>
       <a href="http://www.jalwagame.com/#/register?invitationCode=311643325987" class="btn btn-secondary">Login</a>
+    </div>
+    
+    <!-- Compliance text for ads -->
+    <div class="age-restriction">
+      *Must be 18+ to participate. Terms and conditions apply.
+    </div>
+    
+    <div class="responsible-gaming">
+      Play responsibly. Jalwa Games promotes responsible gaming and encourages players to set limits. If you or someone you know has a gambling problem, please seek help.
     </div>
     
     <!-- Footer Links -->

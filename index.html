@@ -8,7 +8,7 @@
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel=" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Favicon -->
@@ -17,14 +17,14 @@
   <style>
     /* ===== DARKER COLOR SCHEME ===== */
     :root {
-      --bg-dark: #070A1F;  /* Darker navy blue */
-      --bg-darker: #050817; /* Even darker for contrast */
+      --bg-dark: #070A1F;
+      --bg-darker: #050817;
       --primary-accent: #00E7D0;
       --primary-accent-light: #00FFAA;
       --text-light: #FFFFFF;
       --text-gray: #CCCCFF;
     }
-    
+
     body {
       background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
       min-height: 100vh;
@@ -36,8 +36,7 @@
       margin: 0;
       padding: 0;
     }
-    
-    /* ===== HEADER WITH BUTTONS ===== */
+
     .header {
       display: flex;
       justify-content: space-between;
@@ -46,26 +45,25 @@
       margin: 0 auto;
       padding: 1rem 2rem;
     }
-    
+
     .header-buttons {
       display: flex;
       gap: 1rem;
     }
-    
-    /* ===== MAIN CONTENT ===== */
+
     .main-container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
       text-align: center;
     }
-    
+
     .logo {
-      width: 200px; /* Increased size */
+      width: 200px;
       margin: 0 auto 2rem;
       display: block;
     }
-    
+
     .banner {
       width: 100%;
       max-width: 800px;
@@ -74,15 +72,14 @@
       box-shadow: 0 10px 20px rgba(0, 231, 208, 0.2);
       border: 2px solid rgba(0, 231, 208, 0.1);
     }
-    
-    /* ===== TYPOGRAPHY ===== */
+
     .heading {
       color: var(--primary-accent);
       font-weight: 700;
       margin: 1.5rem 0;
       text-shadow: 0 0 10px rgba(0, 231, 208, 0.3);
     }
-    
+
     .subheading {
       color: var(--text-light);
       font-weight: 600;
@@ -91,7 +88,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    
+
     .content-text {
       color: var(--text-gray);
       line-height: 1.6;
@@ -100,8 +97,7 @@
       margin-left: auto;
       margin-right: auto;
     }
-    
-    /* ===== BUTTONS ===== */
+
     .btn {
       padding: 12px 30px;
       border-radius: 50px;
@@ -113,46 +109,44 @@
       text-align: center;
       display: inline-block;
       cursor: pointer;
-      text-decoration: none; /* Remove underline from all buttons */
+      text-decoration: none;
     }
-    
+
     .btn-primary {
       background: linear-gradient(90deg, var(--primary-accent), var(--primary-accent-light));
       color: var(--bg-dark);
       border: none;
     }
-    
+
     .btn-primary:hover {
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(0, 231, 208, 0.4);
     }
-    
+
     .btn-secondary {
       background: transparent;
       color: var(--primary-accent);
       border: 2px solid var(--primary-accent);
     }
-    
+
     .btn-secondary:hover {
       background: rgba(0, 231, 208, 0.1);
       transform: translateY(-3px);
     }
-    
+
     .btn-sm {
       padding: 8px 20px;
       min-width: 120px;
       font-size: 0.9rem;
     }
-    
-    /* ===== BUTTON GROUP ===== */
+
     .button-group {
       display: flex;
       justify-content: center;
-      gap: 20px; /* Added gap between buttons */
+      gap: 20px;
       margin: 2rem 0;
     }
-    
-    /* ===== FOOTER LINKS ===== */
+
     .footer-links {
       display: flex;
       justify-content: center;
@@ -160,54 +154,51 @@
       margin-top: 3rem;
       flex-wrap: wrap;
     }
-    
+
     .footer-link {
       color: var(--text-gray);
       font-size: 0.9rem;
       transition: color 0.3s ease;
       text-decoration: none;
     }
-    
+
     .footer-link:hover {
       color: var(--primary-accent);
     }
-    
-    /* ===== RESPONSIVE DESIGN ===== */
+
     @media (max-width: 768px) {
       .header {
         flex-direction: column;
         padding: 1rem;
       }
-      
+
       .header-buttons {
         margin-top: 1rem;
       }
-      
+
       .main-container {
         padding: 1rem;
       }
-      
+
       .button-group {
         flex-direction: column;
         align-items: center;
         gap: 15px;
       }
-      
+
       .btn {
         width: 100%;
         max-width: 300px;
       }
     }
-    
-    /* ===== COMPLIANCE FOR ADS ===== */
-    /* Added to help with Google Ads review */
+
     .age-restriction {
       font-size: 0.8rem;
       color: var(--text-gray);
       margin-top: 2rem;
       opacity: 0.8;
     }
-    
+
     .responsible-gaming {
       font-size: 0.8rem;
       color: var(--text-gray);
@@ -216,10 +207,40 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    /* ===== ✅ Live Ticker Styles ===== */
+    .ticker-container {
+      overflow: hidden;
+      white-space: nowrap;
+      border-top: 2px solid var(--primary-accent);
+      border-bottom: 2px solid var(--primary-accent-light);
+      background-color: var(--bg-dark);
+      padding: 10px 0;
+    }
+
+    .ticker-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 20s linear infinite;
+      font-size: 16px;
+      font-weight: 600;
+      background: linear-gradient(90deg, var(--primary-accent), var(--primary-accent-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .ticker-container:hover .ticker-text {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
   </style>
 </head>
 <body>
-  <!-- Header with Login/Register -->
+  <!-- Header -->
   <div class="header">
     <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" alt="Jalwa Games Logo" class="logo">
     <div class="header-buttons">
@@ -228,39 +249,34 @@
     </div>
   </div>
 
+  <!-- ✅ Live Winners Ticker -->
+  <div class="ticker-container">
+    <div class="ticker-text">
+      🎉 Ramesh won ₹1,200 on Wingo! 💰 Pooja withdrew ₹5,000! 🔥 Amit hit Big – ₹3,300! 🏆 Neha won ₹2,000! 🎯 Rahul earned ₹800 Referral! 💸 Shruti withdrew ₹1,100!
+    </div>
+  </div>
+
   <!-- Main Content -->
   <div class="main-container">
-    <!-- Main Banner -->
     <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/banner/Banner_20250609132654h9f7.jpg" alt="Jalwa Games Banner" class="banner">
-    
-    <!-- Main Heading -->
     <h1 class="heading">Welcome to JALWA GAMES Platform</h1>
     <h2 class="subheading">Register Now & Get ₹500 Sign Up Bonus</h2>
-    
-    <!-- Content -->
     <p class="content-text">
       Jalwa Games is a premium online gaming platform designed for players who seek thrilling and rewarding entertainment. 
       With our intuitive interface and seamless experience, we offer an electrifying environment for both beginners and 
       experienced gamers. Dive into dynamic challenges, explore exciting features, and sharpen your skills in our vibrant 
       gaming universe. Join Jalwa Games today and experience the ultimate playground of excitement!
     </p>
-    
-    <!-- Action Buttons -->
     <div class="button-group">
       <a href="http://www.jalwagame.com/#/register?invitationCode=311643325987" class="btn btn-primary">Register Now</a>
       <a href="http://www.jalwagame.com/#/register?invitationCode=311643325987" class="btn btn-secondary">Login</a>
     </div>
-    
-    <!-- Compliance text for ads -->
     <div class="age-restriction">
       *Must be 18+ to participate. Terms and conditions apply.
     </div>
-    
     <div class="responsible-gaming">
       Play responsibly. Jalwa Games promotes responsible gaming and encourages players to set limits. If you or someone you know has a gambling problem, please seek help.
     </div>
-    
-    <!-- Footer Links -->
     <div class="footer-links">
       <a href="#" class="footer-link">Privacy Policy</a>
       <a href="#" class="footer-link">Terms & Conditions</a>

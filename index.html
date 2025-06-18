@@ -8,14 +8,13 @@
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel=" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Favicon -->
   <link rel="icon" href="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" type="image/png" sizes="32x32">
   
   <style>
-    /* ===== DARKER COLOR SCHEME ===== */
     :root {
       --bg-dark: #070A1F;
       --bg-darker: #050817;
@@ -26,7 +25,7 @@
     }
 
     body {
-      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+      background: linear-gradient(135deg, var(--bg-dark), var(--bg-darker));
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -208,34 +207,47 @@
       margin-right: auto;
     }
 
-    /* ===== ✅ Live Ticker Styles ===== */
-    .ticker-container {
-      overflow: hidden;
-      white-space: nowrap;
-      border-top: 2px solid var(--primary-accent);
-      border-bottom: 2px solid var(--primary-accent-light);
-      background-color: var(--bg-dark);
-      padding: 10px 0;
+    /* ===== ✅ FLOATING TICKER STYLES ===== */
+    .floating-ticker {
+      position: fixed;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      animation: slideUp 1.4s ease-out forwards 1.2s;
     }
 
-    .ticker-text {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll 20s linear infinite;
-      font-size: 16px;
+    .floating-content {
+      background: radial-gradient(ellipse at center, #070A1F, #050817);
+      padding: 12px 30px;
+      border-radius: 50px;
       font-weight: 600;
-      background: linear-gradient(90deg, var(--primary-accent), var(--primary-accent-light));
+      font-size: 15px;
+      background-clip: text;
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: transparent;
+      background-image: linear-gradient(90deg, #00E7D0, #00FFAA);
+      box-shadow: 0 8px 30px rgba(0, 255, 170, 0.3);
+      border: 2px solid #00E7D0;
+      white-space: nowrap;
     }
 
-    .ticker-container:hover .ticker-text {
-      animation-play-state: paused;
+    @keyframes slideUp {
+      from {
+        bottom: -100px;
+        opacity: 0;
+      }
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
     }
 
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+    @media (max-width: 600px) {
+      .floating-content {
+        font-size: 13px;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
@@ -246,13 +258,6 @@
     <div class="header-buttons">
       <a href="http://www.jalwagame.com/#/register?invitationCode=311643325987" class="btn btn-secondary btn-sm">Login</a>
       <a href="http://www.jalwagame.com/#/register?invitationCode=311643325987" class="btn btn-primary btn-sm">Register</a>
-    </div>
-  </div>
-
-  <!-- ✅ Live Winners Ticker -->
-  <div class="ticker-container">
-    <div class="ticker-text">
-      🎉 Ramesh won ₹1,200 on Wingo! 💰 Pooja withdrew ₹5,000! 🔥 Amit hit Big – ₹3,300! 🏆 Neha won ₹2,000! 🎯 Rahul earned ₹800 Referral! 💸 Shruti withdrew ₹1,100!
     </div>
   </div>
 
@@ -282,6 +287,13 @@
       <a href="#" class="footer-link">Terms & Conditions</a>
       <a href="#" class="footer-link">Disclaimer</a>
       <a href="#" class="footer-link">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- ✅ Floating Winner Ticker at Bottom -->
+  <div class="floating-ticker">
+    <div class="floating-content">
+      🎉 Ravi from Delhi just won ₹2,500 in Color Game! 💸
     </div>
   </div>
 </body>

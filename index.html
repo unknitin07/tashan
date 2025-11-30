@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Jalwa Game | Play Skill-Based Jalwa Games Online | Official Platform 2024</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Jalwa Game - India's #1 skill-based gaming platform. Play exciting Jalwa Games, test your skills, and compete with players nationwide. Join now and get welcome rewards!">
+  <meta name="keywords" content="jalwa game, jalwa games, jalwa skill games, jalwa game online, jalwa gaming platform, skill based games india">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" type="image/png" sizes="32x32">
+  <meta name="google-site-verification" content="MO371ExI_Z0iwFd-io1sAYS-f8sM_S3pwLADmoxiUh4" />
+  <meta name="theme-color" content="#00E7D0">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Jalwa Game - Skill-Based Gaming Platform">
+  <meta property="og:description" content="Play exciting skill-based Jalwa Games. Test your abilities and compete with thousands of players.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jalwaimg.jalwa-jalwa.com/Jalwa/banner/Banner_20250609132654h9f7.jpg">
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GameWebsite",
+    "name": "Jalwa Game",
+    "description": "Skill-based online gaming platform offering competitive games and challenges",
+    "url": "https://jalwaclub3.com",
+    "logo": "https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png"
+  }
+  </script>
+  
+  <style>
+    /* === CSS Variables === */
+    :root {
+      --primary-color: #00E7D0;
+      --secondary-color: #FF6B6B;
+      --tertiary-color: #FFA94D;
+      --bg-dark: #0A0F1C;
+      --card-bg: #131a3d;
+      --text-light: #FFFFFF;
+      --text-dark: #000000;
+      --border-glow: rgba(0, 231, 208, 0.3);
+      --success-color: #4CAF50;
+    }
+
+    /* === Global Reset === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* === Background Animation === */
+    .background-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .animated-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0A0F1C 0%, #1a1f3a 50%, #0A0F1C 100%);
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .particle-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .particle {
+      position: absolute;
+      background: rgba(0, 231, 208, 0.6);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(var(--drift-x));
+        opacity: 0;
+      }
+    }
+
+    .grid-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(0, 231, 208, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 231, 208, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: gridMove 20s linear infinite;
+    }
+
+    @keyframes gridMove {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+
+    /* === Sticker Icons === */
+    .sticker {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, rgba(0, 231, 208, 0.2) 0%, rgba(0, 231, 208, 0.05) 100%);
+      border: 2px solid rgba(0, 231, 208, 0.3);
+      border-radius: 12px;
+      font-size: 24px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 15px rgba(0, 231, 208, 0.2);
+    }
+
+    .sticker-lg {
+      width: 64px;
+      height: 64px;
+      font-size: 32px;
+      border-radius: 16px;
+    }
+
+    .sticker-sm {
+      width: 36px;
+      height: 36px;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+
+    /* === Header === */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(10, 15, 28, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 1000;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 0.75rem 0;
+    }
+
+    .header-content {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .logo {
+      height: 40px;
+      width: auto;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      cursor: pointer;
+    }
+
+    .logo:active {
+      transform: scale(0.95);
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    /* === Buttons === */
+    .btn {
+      position: relative;
+      padding: 0.65rem 1.2rem;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      touch-action: manipulation;
+      user-select: none;
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+    }
+
+    .btn-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #00c0ac 100%);
+      color: var(--text-dark);
+      box-shadow: 0 4px 15px rgba(0, 231, 208, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, #ff4d4d 100%);
+      color: var(--text-light);
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    }
+
+    .btn-sm {
+      padding: 0.5rem 0.9rem;
+      font-size: 0.85rem;
+    }
+
+    .btn-large {
+      padding: 1rem 2rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    /* === Main Container === */
+    .main-container {
+      position: relative;
+      padding-top: 70px;
+      min-height: 100vh;
+    }
+
+    /* === Banner Section === */
+    .banner-section {
+      max-width: 100%;
+      margin: 0 auto 2rem;
+      padding: 0 1rem;
+    }
+
+    .banner-container {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .banner-fallback {
+      background: linear-gradient(135deg, var(--card-bg) 0%, #1a2550 100%);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .fallback-banner h3 {
+      font-size: 2rem;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .fallback-banner p {
+      font-size: 1.2rem;
+      color: var(--text-light);
+    }
+
+    /* === Hero Section === */
+    .hero-section {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .title-line {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.3rem;
+    }
+
+    .title-brand {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary-color) 0%, #00fff0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 60px rgba(0, 231, 208, 0.4);
+      margin: 0.5rem 0;
+    }
+
+    .hero-subtitle {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .subtitle-text {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .subtitle-highlight {
+      font-size: 2rem;
+      font-weight: 900;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--tertiary-color);
+      text-shadow: 0 0 20px rgba(255, 169, 77, 0.5);
+    }
+
+    .hero-description {
+      max-width: 100%;
+      margin: 0 auto 2rem;
+    }
+
+    .description-text {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: left;
+      padding: 0 0.5rem;
+    }
+
+    /* === Content Sections === */
+    .content-section {
+      max-width: 100%;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--primary-color);
+      border-radius: 2px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-glow);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .content-card:active {
+      transform: scale(0.98);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .card-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      margin: 0;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* === Games List === */
+    .games-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .games-list li {
+      padding: 1rem;
+      background: rgba(0, 231, 208, 0.05);
+      border-left: 4px solid var(--primary-color);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .games-list li:active {
+      background: rgba(0, 231, 208, 0.1);
+      transform: translateX(5px);
+    }
+
+    /* === Features Grid === */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .feature-item {
+      text-align: left;
+      padding: 1.5rem;
+      background: rgba(0, 231, 208, 0.03);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .feature-item:active {
+      background: rgba(0, 231, 208, 0.08);
+      transform: scale(0.98);
+    }
+
+    .feature-content {
+      flex: 1;
+    }
+
+    .feature-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-text {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.5;
+    }
+
+    /* === CTA Section === */
+    .cta-section {
+      margin: 3rem 0 2rem;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    /* === Disclaimers === */
+    .disclaimers {
+      max-width: 100%;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .age-restriction {
+      background: rgba(255, 107, 107, 0.1);
+      border: 2px solid var(--secondary-color);
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .disclaimer-text {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    .responsible-gaming {
+      background: var(--card-bg);
+      border: 1px solid var(--border-glow);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .responsible-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: left;
+    }
+
+    /* === Footer === */
+    .footer-section {
+      background: var(--card-bg);
+      border-top: 1px solid var(--border-glow);
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 100%;
+      margin: 0 auto 1.5rem;
+    }
+
+    .footer-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      padding: 0.75rem;
+      background: rgba(0, 231, 208, 0.05);
+      border-radius: 8px;
+      text-align: center;
+      display: block;
+    }
+
+    .footer-link:active {
+      background: rgba(0, 231, 208, 0.15);
+      transform: scale(0.95);
+    }
+
+    .footer-copyright {
+      text-align: center;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* === Legal Pages === */
+    .legal-page {
+      display: none;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      padding-top: 90px;
+    }
+
+    .legal-page[style*="display: block"] {
+      display: block !important;
+    }
+
+    .legal-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .back-button {
+      background: var(--card-bg);
+      border: 1px solid var(--border-glow);
+      color: var(--primary-color);
+      padding: 0.75rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+
+    .back-button:active {
+      transform: scale(0.9);
+      background: rgba(0, 231, 208, 0.1);
+    }
+
+    .legal-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .legal-content {
+      background: var(--card-bg);
+      border: 1px solid var(--border-glow);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+
+    .legal-section {
+      margin-bottom: 2rem;
+    }
+
+    .legal-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .legal-section p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 1rem;
+    }
+
+    .legal-section ul {
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .legal-section li {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-update {
+      text-align: center;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* === Notification System === */
+    .notification-container {
+      position: fixed;
+      top: 80px;
+      left: 1rem;
+      right: 1rem;
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      pointer-events: none;
+    }
+
+    .notification {
+      background: var(--card-bg);
+      border: 1px solid var(--border-glow);
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      transform: translateY(-100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    .notification.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .notification-content {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .notification-text {
+      flex: 1;
+    }
+
+    .notification-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--primary-color);
+      margin-bottom: 0.25rem;
+    }
+
+    .notification-message {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.4;
+    }
+
+    /* === Loading Indicator === */
+    .loading-indicator {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--card-bg);
+      border: 1px solid var(--primary-color);
+      border-radius: 50px;
+      padding: 0.75rem 1.5rem;
+      box-shadow: 0 8px 30px rgba(0, 231, 208, 0.4);
+      z-index: 10000;
+      opacity: 0;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .loading-indicator.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .loading-spinner {
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--primary-color);
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .loading-text {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--primary-color);
+    }
+
+    /* === Tablet Optimization === */
+    @media (min-width: 768px) {
+      html {
+        font-size: 18px;
+      }
+
+      .header-content {
+        padding: 0 2rem;
+      }
+
+      .logo {
+        height: 50px;
+      }
+
+      .title-brand {
+        font-size: 3.5rem;
+      }
+
+      .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .footer-links {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+
+      .button-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .btn-large {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .notification-container {
+        left: auto;
+        right: 2rem;
+        max-width: 400px;
+      }
+
+      .legal-content {
+        padding: 2rem;
+      }
+    }
+
+    /* === Large Screen Optimization === */
+    @media (min-width: 1024px) {
+      .main-container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .content-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* === Touch Optimization === */
+    @media (hover: none) and (pointer: coarse) {
+      .btn,
+      .footer-link,
+      .games-list li,
+      .feature-item,
+      .content-card {
+        min-height: 44px;
+      }
+
+      .btn {
+        touch-action: manipulation;
+      }
+    }
+
+    /* === Accessibility === */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* === Dark Mode Support === */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--bg-dark);
+      }
+    }
+
+    /* === Landscape Mobile === */
+    @media (max-width: 768px) and (orientation: landscape) {
+      .hero-section {
+        padding: 1rem;
+      }
+
+      .title-brand {
+        font-size: 2rem;
+      }
+
+      .main-container {
+        padding-top: 60px;
+      }
+    }
+
+    /* === Print Styles === */
+    @media print {
+      .header,
+      .cta-section,
+      .button-group,
+      .notification-container,
+      .loading-indicator,
+      .background-container,
+      .back-button {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+        color: black;
+      }
+
+      .legal-page.active {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="background-container">
+    <div class="animated-bg"></div>
+    <div class="particle-container" id="particles"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" alt="Jalwa Game Logo" class="logo" onerror="this.style.display='none';">
+      </div>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="https://jalwaclub3.com/#/register?invitationCode=568556452044" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer" aria-label="Login to Jalwa Game">
+          <span class="btn-text">Login</span>
+        </a>
+        <a href="https://jalwaclub3.com/#/register?invitationCode=568556452044" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" aria-label="Register for Jalwa Games">
+          <span class="btn-text">Register</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Home Page -->
+  <main class="main-container" id="home-page">
+      <!-- Banner Section -->
+      <section class="banner-section">
+        <div class="legal-section">
+        <h3>Technical Support</h3>
+        <p>
+          Experiencing technical issues? Our technical team can help with account problems, login issues, gameplay bugs, and platform performance concerns.
+        </p>
+        <ul>
+          <li><strong>Technical Email:</strong> tech@jalwagame.com</li>
+          <li><strong>Include:</strong> Device type, browser version, and detailed issue description</li>
+          <li><strong>Screenshots:</strong> Attach relevant screenshots to help us diagnose faster</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h3>Business Inquiries</h3>
+        <p>
+          For partnership opportunities, sponsorships, media inquiries, or business-related questions, please reach out to our business development team.
+        </p>
+        <ul>
+          <li><strong>Business Email:</strong> business@jalwagame.com</li>
+          <li><strong>Media Contact:</strong> media@jalwagame.com</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h3>Report Issues</h3>
+        <p>
+          Help us maintain a fair and safe gaming environment. Report any of the following:
+        </p>
+        <ul>
+          <li><strong>Suspected cheating or unfair play</strong></li>
+          <li><strong>Harassment or inappropriate behavior</strong></li>
+          <li><strong>Security vulnerabilities</strong></li>
+          <li><strong>Terms of Service violations</strong></li>
+        </ul>
+        <p>Send reports to: <strong>report@jalwagame.com</strong></p>
+      </div>
+
+      <div class="legal-section">
+        <h3>Feedback & Suggestions</h3>
+        <p>
+          We value your input! Share your ideas for new features, game improvements, or general feedback about your Jalwa Game experience.
+        </p>
+        <ul>
+          <li><strong>Feedback Email:</strong> feedback@jalwagame.com</li>
+          <li><strong>In-App Feedback:</strong> Use the feedback form in your account settings</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h3>Social Media</h3>
+        <p>
+          Stay connected and follow us on social media for the latest updates, tournament announcements, and community events.
+        </p>
+        <ul>
+          <li><strong>Telegram:</strong> Official community channel for instant updates</li>
+          <li><strong>Updates:</strong> Check in-app notifications for important announcements</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h3>Response Times</h3>
+        <p>
+          We strive to respond to all inquiries as quickly as possible:
+        </p>
+        <ul>
+          <li><strong>Urgent Issues:</strong> Within 2-4 hours</li>
+          <li><strong>General Support:</strong> Within 24 hours</li>
+          <li><strong>Business Inquiries:</strong> Within 48-72 hours</li>
+          <li><strong>Feedback:</strong> Acknowledged within 48 hours</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h3>Before You Contact Us</h3>
+        <p>
+          To help us assist you more efficiently, please:
+        </p>
+        <ul>
+          <li>Check our FAQ section for common questions</li>
+          <li>Review the Terms & Conditions and Privacy Policy</li>
+          <li>Have your account information ready (username, registered email)</li>
+          <li>Provide specific details about your issue or question</li>
+          <li>Include any error messages or screenshots</li>
+        </ul>
+      </div>
+
+      <div class="legal-update">
+        We look forward to hearing from you!
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Indicator -->
+  <div id="loading-indicator" class="loading-indicator">
+    <div class="loading-spinner"></div>
+    <span class="loading-text">Loading...</span>
+  </div>
+
+  <!-- Notification System -->
+  <div id="notification-container" class="notification-container"></div>
+
+  <script>
+    // Utility functions
+    const utils = {
+      throttle: (func, delay) => {
+        let timeoutId;
+        let lastExecTime = 0;
+        return function (...args) {
+          const currentTime = Date.now();
+          if (currentTime - lastExecTime > delay) {
+            func.apply(this, args);
+            lastExecTime = currentTime;
+          } else {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+              func.apply(this, args);
+              lastExecTime = Date.now();
+            }, delay - (currentTime - lastExecTime));
+          }
+        };
+      },
+
+      randomBetween: (min, max) => {
+        return Math.random() * (max - min) + min;
+      }
+    };
+
+    // Page Navigation System
+    class PageNavigator {
+      constructor() {
+        this.currentPage = 'home';
+        this.init();
+      }
+
+      init() {
+        // Handle footer link clicks
+        document.querySelectorAll('.footer-link').forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const page = e.target.getAttribute('data-page');
+            this.showPage(page);
+          });
+        });
+
+        // Make showPage globally accessible
+        window.showPage = (page) => this.showPage(page);
+      }
+
+      showPage(pageName) {
+        // Hide all pages first
+        const homePage = document.getElementById('home-page');
+        const allLegalPages = document.querySelectorAll('.legal-page');
+        
+        if (pageName === 'home') {
+          homePage.style.display = 'block';
+          allLegalPages.forEach(page => page.style.display = 'none');
+          this.currentPage = 'home';
+        } else {
+          homePage.style.display = 'none';
+          allLegalPages.forEach(page => page.style.display = 'none');
+          
+          const targetPage = document.getElementById(`${pageName}-page`);
+          if (targetPage) {
+            targetPage.style.display = 'block';
+            this.currentPage = pageName;
+          }
+        }
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Notification System
+    class NotificationSystem {
+      static instance = null;
+      
+      static getInstance() {
+        if (!NotificationSystem.instance) {
+          NotificationSystem.instance = new NotificationSystem();
+        }
+        return NotificationSystem.instance;
+      }
+
+      constructor() {
+        this.container = document.getElementById('notification-container');
+        this.notifications = [];
+      }
+
+      show({ title, message, type = 'info', duration = 3000 }) {
+        const notification = this.createNotification({ title, message, type });
+        this.container.appendChild(notification);
+        this.notifications.push(notification);
+
+        requestAnimationFrame(() => {
+          notification.classList.add('show');
+        });
+
+        setTimeout(() => {
+          this.remove(notification);
+        }, duration);
+
+        return notification;
+      }
+
+      createNotification({ title, message, type }) {
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        
+        const icons = {
+          info: 'ℹ️',
+          success: '✅',
+          warning: '⚠️',
+          error: '❌'
+        };
+
+        notification.innerHTML = `
+          <div class="notification-content">
+            <div class="sticker-sm">${icons[type] || icons.info}</div>
+            <div class="notification-text">
+              <div class="notification-title">${title}</div>
+              <div class="notification-message">${message}</div>
+            </div>
+          </div>
+        `;
+
+        notification.addEventListener('click', () => {
+          this.remove(notification);
+        });
+
+        return notification;
+      }
+
+      remove(notification) {
+        notification.classList.remove('show');
+        setTimeout(() => {
+          if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+          }
+          this.notifications = this.notifications.filter(n => n !== notification);
+        }, 300);
+      }
+    }
+
+    // Loading Indicator
+    class LoadingIndicator {
+      constructor() {
+        this.indicator = document.getElementById('loading-indicator');
+        this.init();
+      }
+
+      init() {
+        document.addEventListener('click', (e) => {
+          const link = e.target.closest('a[target="_blank"]');
+          if (link && link.href && link.href.startsWith('http')) {
+            this.show();
+          }
+        });
+      }
+
+      show() {
+        this.indicator.classList.add('show');
+        setTimeout(() => {
+          this.indicator.classList.remove('show');
+        }, 2000);
+      }
+    }
+
+    // Particle System (optimized for mobile)
+    class ParticleSystem {
+      constructor() {
+        this.particles = [];
+        this.container = document.getElementById('particles');
+        this.maxParticles = this.getMaxParticles();
+        this.init();
+      }
+
+      getMaxParticles() {
+        const width = window.innerWidth;
+        if (width < 480) return 10;
+        if (width < 768) return 15;
+        if (width < 1200) return 25;
+        return 35;
+      }
+
+      init() {
+        for (let i = 0; i < this.maxParticles; i++) {
+          setTimeout(() => {
+            this.createParticle();
+          }, i * 150);
+        }
+        this.animate();
+      }
+
+      createParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        const startX = utils.randomBetween(-50, window.innerWidth + 50);
+        const startY = window.innerHeight + 50;
+        const size = utils.randomBetween(1, 2.5);
+        const duration = utils.randomBetween(15, 30);
+        const opacity = utils.randomBetween(0.3, 0.7);
+        const driftX = utils.randomBetween(-100, 100);
+        
+        particle.style.cssText = `
+          left: ${startX}px;
+          top: ${startY}px;
+          width: ${size}px;
+          height: ${size}px;
+          opacity: ${opacity};
+          animation: float ${duration}s linear infinite;
+          animation-delay: ${utils.randomBetween(0, 5)}s;
+          --drift-x: ${driftX}px;
+        `;
+        
+        this.container.appendChild(particle);
+        this.particles.push(particle);
+
+        setTimeout(() => {
+          if (particle.parentNode) {
+            particle.parentNode.removeChild(particle);
+            this.particles = this.particles.filter(p => p !== particle);
+          }
+        }, (duration + 5) * 1000);
+      }
+
+      animate() {
+        if (this.particles.length < this.maxParticles) {
+          if (Math.random() < 0.06) {
+            this.createParticle();
+          }
+        }
+        requestAnimationFrame(() => this.animate());
+      }
+    }
+
+    // Scroll Handler (optimized for mobile)
+    class ScrollHandler {
+      constructor() {
+        this.header = document.querySelector('.header');
+        this.lastScrollY = window.scrollY;
+        this.init();
+      }
+
+      init() {
+        const handleScroll = utils.throttle(() => {
+          const currentScrollY = window.scrollY;
+          
+          // Change header background on scroll
+          if (currentScrollY > 50) {
+            this.header.style.background = 'rgba(10, 15, 28, 0.98)';
+            this.header.style.backdropFilter = 'blur(25px) saturate(1.2)';
+          } else {
+            this.header.style.background = 'rgba(10, 15, 28, 0.95)';
+            this.header.style.backdropFilter = 'blur(20px)';
+          }
+
+          // Hide header on scroll down, show on scroll up (mobile only)
+          if (window.innerWidth < 768) {
+            if (currentScrollY > this.lastScrollY && currentScrollY > 150) {
+              this.header.style.transform = 'translateY(-100%)';
+            } else {
+              this.header.style.transform = 'translateY(0)';
+            }
+          }
+
+          this.lastScrollY = currentScrollY;
+        }, 10);
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+      }
+    }
+
+    // Intersection Observer for animations
+    class AnimationObserver {
+      constructor() {
+        this.init();
+      }
+
+      init() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+          }
+        );
+
+        // Observe animated elements
+        const elements = document.querySelectorAll(
+          '.hero-title, .hero-subtitle, .hero-description, .button-group, .banner-container, .content-section, .disclaimers'
+        );
+
+        elements.forEach((el, index) => {
+          el.style.cssText = `
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            transition-delay: ${index * 0.08}s;
+          `;
+          observer.observe(el);
+        });
+      }
+    }
+
+    // Touch Feedback Enhancement
+    class TouchFeedback {
+      constructor() {
+        this.init();
+      }
+
+      init() {
+        // Add active state feedback for touch
+        const interactiveElements = document.querySelectorAll(
+          '.btn, .footer-link, .games-list li, .feature-item, .content-card'
+        );
+
+        interactiveElements.forEach(el => {
+          el.addEventListener('touchstart', function() {
+            this.style.opacity = '0.7';
+          }, { passive: true });
+
+          el.addEventListener('touchend', function() {
+            this.style.opacity = '1';
+          }, { passive: true });
+
+          el.addEventListener('touchcancel', function() {
+            this.style.opacity = '1';
+          }, { passive: true });
+        });
+      }
+    }
+
+    // Main Application
+    class JalwaGameApp {
+      constructor() {
+        this.components = {};
+        this.init();
+      }
+
+      init() {
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', () => this.initializeComponents());
+        } else {
+          this.initializeComponents();
+        }
+      }
+
+      initializeComponents() {
+        try {
+          // Initialize all components
+          this.components.notificationSystem = NotificationSystem.getInstance();
+          this.components.pageNavigator = new PageNavigator();
+          this.components.loadingIndicator = new LoadingIndicator();
+          this.components.particleSystem = new ParticleSystem();
+          this.components.scrollHandler = new ScrollHandler();
+          this.components.animationObserver = new AnimationObserver();
+          this.components.touchFeedback = new TouchFeedback();
+
+          // Handle window resize
+          let resizeTimeout;
+          window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+              this.components.particleSystem.maxParticles = this.components.particleSystem.getMaxParticles();
+            }, 250);
+          }, { passive: true });
+
+          // Show welcome notification after delay
+          setTimeout(() => {
+            this.components.notificationSystem.show({
+              title: '🎮 Welcome to Jalwa Game!',
+              message: 'India\'s premier skill-based gaming platform. Start playing now!',
+              type: 'success',
+              duration: 5000
+            });
+          }, 1500);
+          
+          console.log('✅ Jalwa Game Platform Loaded Successfully!');
+        } catch (error) {
+          console.error('Error initializing Jalwa Game:', error);
+        }
+      }
+    }
+
+    // Prevent zoom on double tap (iOS)
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', (event) => {
+      const now = Date.now();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, { passive: false });
+
+    // Initialize App
+    new JalwaGameApp();
+
+    // Service Worker Registration (for PWA capability)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        // Uncomment when you have a service worker file
+        // navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed'));
+      });
+    }
+  </script>
+</body>
+</html>banner-container">
+          <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/banner/Banner_20250609132654h9f7.jpg" alt="Jalwa Game Platform Banner" class="banner-img" onerror="this.style.display='none'; this.parentElement.querySelector('.banner-fallback').style.display='block';">
+          <div class="banner-fallback" style="display: none;">
+            <div class="fallback-banner">
+              <h3>🎮 JALWA GAME</h3>
+              <p>Skill-Based Gaming Platform</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h1 class="hero-title">
+          <span class="title-line">India's Premier</span>
+          <span class="title-brand">JALWA GAME</span>
+          <span class="title-line">Skill Gaming Platform</span>
+        </h1>
+        
+        <h2 class="hero-subtitle">
+          <span class="subtitle-text">Test Your Skills in</span>
+          <span class="subtitle-highlight">JALWA GAMES</span>
+          <span class="subtitle-text">& Compete Nationwide</span>
+        </h2>
+
+        <div class="hero-description">
+          <p class="description-text">
+            <strong>Jalwa Game</strong> is India's leading skill-based gaming platform where strategy meets excitement. Master a diverse collection of <strong>Jalwa Games</strong> designed to challenge your abilities and decision-making skills. Join thousands of skilled players competing in fair, transparent tournaments and challenges. Whether you're a beginner or expert, Jalwa Game offers the perfect environment to showcase your gaming prowess!
+          </p>
+        </div>
+
+        <div class="cta-section">
+          <div class="button-group">
+            <a href="https://jalwaclub3.com/#/register?invitationCode=568556452044" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer" aria-label="Join Jalwa Game Platform">
+              <span class="btn-text">Start Playing Now</span>
+            </a>
+            <a href="https://jalwaclub3.com/#/register?invitationCode=568556452044" class="btn btn-outline btn-large" target="_blank" rel="noopener noreferrer" aria-label="Login to Jalwa Game">
+              <span class="btn-text">Login to Play</span>
+            </a>
+            <a href="https://t.me/Jalwawithrolex" class="btn btn-secondary btn-large" target="_blank" rel="noopener noreferrer" aria-label="Join Jalwa Game Community">
+              <span class="btn-text">Join Community</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Jalwa Game Section -->
+      <section class="content-section">
+        <h2 class="section-title">What is Jalwa Game?</h2>
+        <div class="content-grid">
+          <div class="content-card">
+            <div class="card-header">
+              <div class="sticker">🎯</div>
+              <h3 class="card-title">Skill-Based Platform</h3>
+            </div>
+            <p class="card-text">
+              Jalwa Game is a certified skill-based gaming platform offering competitive challenges that reward strategy, quick thinking, and expertise. Every game outcome depends on player skill, not chance, ensuring fair competition for all participants.
+            </p>
+          </div>
+          <div class="content-card">
+            <div class="card-header">
+              <div class="sticker">🔒</div>
+              <h3 class="card-title">Secure & Verified</h3>
+            </div>
+            <p class="card-text">
+              Play with confidence on our secure platform featuring encrypted connections, verified player profiles, and transparent game mechanics. Your account and progress are protected with industry-leading security protocols.
+            </p>
+          </div>
+          <div class="content-card">
+            <div class="card-header">
+              <div class="sticker">🏆</div>
+              <h3 class="card-title">Competitive Gaming</h3>
+            </div>
+            <p class="card-text">
+              Compete in tournaments, challenges, and leaderboards. Rise through the ranks, earn achievements, and prove your skills against players from across India in fair, skill-based competitions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Jalwa Games Section -->
+      <section class="content-section">
+        <h2 class="section-title">Popular Jalwa Games</h2>
+        <div style="max-width: 100%; margin: 0 auto;">
+          <p class="description-text" style="text-align: center; margin-bottom: 1.5rem;">
+            Explore our diverse collection of skill-based <strong>Jalwa Games</strong> designed to challenge and entertain players of all levels.
+          </p>
+          <ul class="games-list">
+            <li>
+              <div class="sticker-sm">🎲</div>
+              <strong>Strategy Games</strong> - Test your planning and tactical skills
+            </li>
+            <li>
+              <div class="sticker-sm">🧩</div>
+              <strong>Puzzle Challenges</strong> - Solve complex problems and brain teasers
+            </li>
+            <li>
+              <div class="sticker-sm">⚡</div>
+              <strong>Quick Reaction Games</strong> - Fast-paced skill tests
+            </li>
+            <li>
+              <div class="sticker-sm">🎯</div>
+              <strong>Prediction Games</strong> - Strategic forecasting challenges
+            </li>
+            <li>
+              <div class="sticker-sm">🏃</div>
+              <strong>Skill Races</strong> - Compete in timed challenges
+            </li>
+            <li>
+              <div class="sticker-sm">🧠</div>
+              <strong>Memory Games</strong> - Test and improve cognitive abilities
+            </li>
+            <li>
+              <div class="sticker-sm">🎪</div>
+              <strong>Tournament Mode</strong> - Competitive multi-player events
+            </li>
+            <li>
+              <div class="sticker-sm">🎮</div>
+              <strong>Arcade Classics</strong> - Skill-based retro gaming
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- How to Play Section -->
+      <section class="content-section">
+        <h2 class="section-title">How to Start Playing</h2>
+        <div class="content-grid">
+          <div class="content-card">
+            <div class="card-header">
+              <div class="sticker-lg">1️⃣</div>
+              <h3 class="card-title">Create Account</h3>
+            </div>
+            <p class="card-text">
+              Sign up in seconds with your phone number or email. Complete a quick verification process and set up your player profile to start your Jalwa Game journey.
+            </p>
+          </div>
+          <div class="content-card">
+            <div class="card-header">
+              <div class="sticker-lg">2️⃣</div>
+              <h3 class="card-title">Choose Your Game</h3>
+            </div>
+            <p class="card-text">
+              Browse through dozens of skill-based Jalwa Games. Start with practice modes to learn the mechanics, then jump into competitive play when you're ready.
+            </p>
+          </div>
+          <div class="content-card">
+            <div class="card-header">
+              <div class="sticker-lg">3️⃣</div>
+              <h3 class="card-title">Compete & Win</h3>
+            </div>
+            <p class="card-text">
+              Apply your skills in tournaments and challenges. Track your progress, climb leaderboards, and earn achievements as you master different game types.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="content-section">
+        <h2 class="section-title">Why Choose Jalwa Game?</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="sticker">⚡</div>
+            <div class="feature-content">
+              <h3 class="feature-title">Instant Access</h3>
+              <p class="feature-text">Play directly from your browser on any device - no downloads required</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="sticker">🛡️</div>
+            <div class="feature-content">
+              <h3 class="feature-title">100% Secure</h3>
+              <p class="feature-text">Advanced encryption protects your data and ensures fair play</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="sticker">📱</div>
+            <div class="feature-content">
+              <h3 class="feature-title">Mobile Optimized</h3>
+              <p class="feature-text">Seamless experience on smartphones, tablets, and desktops</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="sticker">🎯</div>
+            <div class="feature-content">
+              <h3 class="feature-title">Skill-Based</h3>
+              <p class="feature-text">Pure skill gaming with transparent, verifiable results</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="sticker">🏆</div>
+            <div class="feature-content">
+              <h3 class="feature-title">Tournaments</h3>
+              <p class="feature-text">Daily competitions and special events with leaderboards</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="sticker">💬</div>
+            <div class="feature-content">
+              <h3 class="feature-title">24/7 Support</h3>
+              <p class="feature-text">Round-the-clock assistance via chat and email</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="sticker">👥</div>
+            <div class="feature-content">
+              <h3 class="feature-title">Active Community</h3>
+              <p class="feature-text">Join thousands of players in our growing community</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="sticker">📊</div>
+            <div class="feature-content">
+              <h3 class="feature-title">Progress Tracking</h3>
+              <p class="feature-text">Detailed stats and analytics to improve your skills</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="sticker">🎓</div>
+            <div class="feature-content">
+              <h3 class="feature-title">Learn & Improve</h3>
+              <p class="feature-text">Tutorials and practice modes to master each game</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="content-section">
+        <h2 class="section-title">Jalwa Game Platform Benefits</h2>
+        <div class="content-grid">
+          <div class="content-card">
+            <div class="card-header">
+              <div class="sticker">🎁</div>
+              <h3 class="card-title">Welcome Rewards</h3>
+            </div>
+            <p class="card-text">New players receive welcome bonuses to start their gaming journey</p>
+          </div>
+          <div class="content-card">
+            <div class="card-header">
+              <div class="sticker">🎮</div>
+              <h3 class="card-title">Exclusive Games</h3>
+            </div>
+            <p class="card-text">Access premium Jalwa Games available only to registered members</p>
+          </div>
+          <div class="content-card">
+            <div class="card-header">
+              <div class="sticker">📈</div>
+              <h3 class="card-title">Skill Rankings</h3>
+            </div>
+            <p class="card-text">Climb global and regional leaderboards based on your performance</p>
+          </div>
+          <div class="content-card">
+            <div class="card-header">
+              <div class="sticker">🎪</div>
+              <h3 class="card-title">Special Events</h3>
+            </div>
+            <p class="card-text">Participate in exclusive tournaments and seasonal competitions</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Disclaimers -->
+      <section class="disclaimers">
+        <div class="age-restriction">
+          <div class="sticker-sm">⚠️</div>
+          <span class="disclaimer-text">Must be 18+ to participate. This is a skill-based gaming platform.</span>
+        </div>
+        
+        <div class="responsible-gaming">
+          <p class="responsible-text">
+            <strong>Play Responsibly:</strong> Jalwa Game promotes responsible gaming practices. Set personal limits on your gameplay time and practice sessions. Gaming should be enjoyable entertainment - take regular breaks and maintain a healthy balance with other activities. If you need assistance with gaming habits, please contact our support team.
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer-section">
+        <div class="footer-links">
+          <a href="#" class="footer-link" data-page="privacy">Privacy Policy</a>
+          <a href="#" class="footer-link" data-page="terms">Terms & Conditions</a>
+          <a href="#" class="footer-link" data-page="disclaimer">Disclaimer</a>
+          <a href="#" class="footer-link" data-page="contact">Contact Us</a>
+        </div>
+        <div class="footer-copyright">
+          © 2024 Jalwa Game. All Rights Reserved.<br>
+          Skill-Based Gaming Platform | Play Jalwa Games Responsibly
+        </div>
+      </footer>
+    </main>
+
+    <!-- Privacy Policy Page -->
+    <div id="privacy-page" class="legal-page" style="display: none;">
+    <div class="legal-header">
+      <button class="back-button" onclick="showPage('home')" aria-label="Back to Home">←</button>
+      <h1 class="legal-title">Privacy Policy</h1>
+    </div>
+    <div class="legal-content">
+      <div class="legal-section">
+        <h3>1. Information We Collect</h3>
+        <p>
+          At Jalwa Game, we collect information that you provide directly to us when creating an account, including your name, email address, phone number, and date of birth. We also automatically collect certain information about your device and how you interact with our platform, including IP address, browser type, and gameplay statistics.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>2. How We Use Your Information</h3>
+        <p>We use the information we collect to:</p>
+        <ul>
+          <li>Provide, maintain, and improve Jalwa Game services</li>
+          <li>Process your account registration and verify your identity</li>
+          <li>Enable gameplay features and track your progress</li>
+          <li>Send you technical notices and support messages</li>
+          <li>Communicate with you about tournaments, updates, and promotions</li>
+          <li>Detect and prevent fraud, abuse, and security incidents</li>
+          <li>Comply with legal obligations and enforce our terms</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h3>3. Information Sharing and Disclosure</h3>
+        <p>
+          We do not sell your personal information. We may share your information with service providers who assist in operating our platform, payment processors for transactions, and law enforcement when required by law. All third parties are contractually obligated to maintain the confidentiality of your information.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>4. Data Security</h3>
+        <p>
+          We implement industry-standard security measures including encryption, secure servers, and regular security audits to protect your personal information. However, no internet transmission is completely secure, and we cannot guarantee absolute security. You are responsible for maintaining the confidentiality of your account credentials.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>5. Your Rights and Choices</h3>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access and review your personal information</li>
+          <li>Request correction of inaccurate data</li>
+          <li>Request deletion of your account and data</li>
+          <li>Opt-out of promotional communications</li>
+          <li>Withdraw consent for data processing</li>
+        </ul>
+        <p>To exercise these rights, please contact our support team through the Contact Us page.</p>
+      </div>
+
+      <div class="legal-section">
+        <h3>6. Cookies and Tracking Technologies</h3>
+        <p>
+          Jalwa Game uses cookies and similar technologies to enhance user experience, analyze platform usage, and provide personalized content. You can control cookie preferences through your browser settings, though disabling cookies may affect platform functionality.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>7. Children's Privacy</h3>
+        <p>
+          Jalwa Game is intended for users aged 18 and above. We do not knowingly collect information from individuals under 18. If we discover that we have inadvertently collected such information, we will promptly delete it.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>8. Changes to Privacy Policy</h3>
+        <p>
+          We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. We will notify you of significant changes by posting the updated policy on our platform and updating the "Last Updated" date.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>9. Contact Information</h3>
+        <p>
+          If you have questions or concerns about this Privacy Policy or our data practices, please contact us through our Contact Us page or email our Data Protection Officer.
+        </p>
+      </div>
+
+      <div class="legal-update">
+        Last Updated: November 30, 2024
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms & Conditions Page -->
+  <div id="terms-page" class="legal-page" style="display: none;">
+    <div class="legal-header">
+      <button class="back-button" onclick="showPage('home')" aria-label="Back to Home">←</button>
+      <h1 class="legal-title">Terms & Conditions</h1>
+    </div>
+    <div class="legal-content">
+      <div class="legal-section">
+        <h3>1. Acceptance of Terms</h3>
+        <p>
+          By accessing and using Jalwa Game, you accept and agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our platform. These terms constitute a legally binding agreement between you and Jalwa Game.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>2. Eligibility Requirements</h3>
+        <p>To use Jalwa Game, you must:</p>
+        <ul>
+          <li>Be at least 18 years of age</li>
+          <li>Have the legal capacity to enter into binding contracts</li>
+          <li>Reside in a jurisdiction where skill-based gaming is legal</li>
+          <li>Provide accurate and complete registration information</li>
+          <li>Maintain only one account per person</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h3>3. Account Responsibilities</h3>
+        <p>
+          You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You must immediately notify us of any unauthorized access or security breach. Jalwa Game is not liable for any loss or damage arising from your failure to protect your account information.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>4. Skill-Based Gaming</h3>
+        <p>
+          Jalwa Game is a skill-based gaming platform where outcomes are determined by player skill, strategy, and decision-making rather than chance. All games are designed to reward knowledge, experience, and tactical ability. We maintain transparent game mechanics and fair competition standards.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>5. Prohibited Activities</h3>
+        <p>Users are strictly prohibited from:</p>
+        <ul>
+          <li>Using cheats, exploits, or automated systems</li>
+          <li>Creating multiple accounts or sharing accounts</li>
+          <li>Engaging in collusion or coordinated play</li>
+          <li>Harassing or abusing other players</li>
+          <li>Reverse engineering or attempting to hack the platform</li>
+          <li>Using VPNs to circumvent geographic restrictions</li>
+          <li>Providing false information during registration</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h3>6. Gameplay Rules</h3>
+        <p>
+          Players must follow all game-specific rules and platform guidelines. Jalwa Game reserves the right to review gameplay, investigate suspicious activity, and take appropriate action including warnings, temporary suspensions, or permanent bans for violations.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>7. Intellectual Property</h3>
+        <p>
+          All content on Jalwa Game, including games, graphics, logos, and software, is protected by intellectual property laws and owned by Jalwa Game or its licensors. You may not copy, modify, distribute, or create derivative works without explicit written permission.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>8. Platform Modifications</h3>
+        <p>
+          Jalwa Game reserves the right to modify, suspend, or discontinue any aspect of the platform at any time without prior notice. We may also update these Terms and Conditions periodically, and continued use constitutes acceptance of the modified terms.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>9. Limitation of Liability</h3>
+        <p>
+          Jalwa Game provides the platform "as is" without warranties of any kind. We are not liable for indirect, incidental, special, or consequential damages arising from your use of the platform. Our total liability shall not exceed the amount you paid to us in the past 12 months.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>10. Dispute Resolution</h3>
+        <p>
+          Any disputes arising from these terms shall be resolved through binding arbitration in accordance with applicable laws. You agree to waive your right to participate in class actions or jury trials.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>11. Termination</h3>
+        <p>
+          Either party may terminate this agreement at any time. Jalwa Game may immediately suspend or terminate your account for violations of these terms. Upon termination, your right to use the platform ceases immediately.
+        </p>
+      </div>
+
+      <div class="legal-update">
+        Last Updated: November 30, 2024
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer Page -->
+  <div id="disclaimer-page" class="legal-page" style="display: none;">
+    <div class="legal-header">
+      <button class="back-button" onclick="showPage('home')" aria-label="Back to Home">←</button>
+      <h1 class="legal-title">Disclaimer</h1>
+    </div>
+    <div class="legal-content">
+      <div class="legal-section">
+        <h3>1. Nature of Platform</h3>
+        <p>
+          Jalwa Game is a skill-based gaming platform designed for entertainment purposes. Success on our platform depends entirely on player skill, strategic thinking, and decision-making abilities. We do not operate games of chance or gambling services.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>2. No Guarantees</h3>
+        <p>
+          While Jalwa Game strives to provide a fair and enjoyable gaming experience, we make no guarantees regarding:</p>
+        <ul>
+          <li>Continuous, uninterrupted, or error-free platform access</li>
+          <li>Specific gaming outcomes or performance results</li>
+          <li>Compatibility with all devices or browsers</li>
+          <li>Availability of specific games or features</li>
+          <li>Achievement of particular skill levels or rankings</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h3>3. Legal Compliance</h3>
+        <p>
+          It is your responsibility to ensure that your use of Jalwa Game complies with all applicable local, state, and national laws in your jurisdiction. Skill-based gaming regulations vary by location, and you must verify legality before participating.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>4. Third-Party Links</h3>
+        <p>
+          Jalwa Game may contain links to third-party websites or services. We are not responsible for the content, privacy practices, or terms of these external sites. Your use of third-party services is at your own risk.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>5. Technical Issues</h3>
+        <p>
+          We are not liable for any losses or damages resulting from technical difficulties, connectivity issues, device malfunctions, or other technological problems beyond our reasonable control. Players should ensure stable internet connections and compatible devices.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>6. Game Results</h3>
+        <p>
+          All game results are final once confirmed. While we maintain systems to ensure fair play and accurate results, we reserve the right to review and adjust results if technical errors or rule violations are detected.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>7. Responsible Gaming</h3>
+        <p>
+          Jalwa Game encourages responsible gaming practices. Players should:</p>
+        <ul>
+          <li>Set personal limits on time spent gaming</li>
+          <li>Take regular breaks during extended play sessions</li>
+          <li>Maintain balance between gaming and other life activities</li>
+          <li>Seek help if gaming becomes problematic</li>
+          <li>Never play while impaired or under stress</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h3>8. Age Restrictions</h3>
+        <p>
+          Jalwa Game is strictly for adults 18 years and older. We implement age verification measures, but it is your responsibility to ensure compliance with age requirements. Parents and guardians should monitor device usage by minors.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>9. Information Accuracy</h3>
+        <p>
+          While we strive to provide accurate and up-to-date information on our platform, we cannot guarantee the completeness or accuracy of all content. Game rules, features, and platform policies may change without prior notice.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>10. No Professional Advice</h3>
+        <p>
+          Information provided on Jalwa Game is for entertainment and general informational purposes only. It does not constitute professional, financial, legal, or medical advice. Consult appropriate professionals for specific advice.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>11. Jurisdiction-Specific Disclaimers</h3>
+        <p>
+          Some jurisdictions do not allow limitations on implied warranties or liability for incidental or consequential damages. In such jurisdictions, our liability is limited to the maximum extent permitted by law.
+        </p>
+      </div>
+
+      <div class="legal-update">
+        Last Updated: November 30, 2024
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Us Page -->
+  <div id="contact-page" class="legal-page" style="display: none;">
+    <div class="legal-header">
+      <button class="back-button" onclick="showPage('home')" aria-label="Back to Home">←</button>
+      <h1 class="legal-title">Contact Us</h1>
+    </div>
+    <div class="legal-content">
+      <div class="legal-section">
+        <h3>Get in Touch</h3>
+        <p>
+          We're here to help! Whether you have questions about Jalwa Game, need technical support, or want to provide feedback, our team is ready to assist you. Choose the method that works best for you.
+        </p>
+      </div>
+
+      <div class="legal-section">
+        <h3>Customer Support</h3>
+        <p>
+          Our dedicated support team is available 24/7 to help with any issues or questions you may have about the platform, gameplay, or your account.
+        </p>
+        <ul>
+          <li><strong>Live Chat:</strong> Available in the app - click the support icon</li>
+          <li><strong>Email:</strong> support@jalwagame.com</li>
+          <li><strong>Response Time:</strong> Within 24 hours for all inquiries</li>
+        </ul>
+      </div>
+
+      <div class="legal-section">
+        <h3>Telegram Community</h3>
+        <p>
+          Join our active Telegram community to connect with other players, get game tips, and receive instant updates about tournaments and new features.
+        </p>
+        <ul>
+          <li><strong>Telegram Channel:</strong> <a href="https://t.me/Jalwawithrolex" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">@Jalwawithrolex</a></li>
+          <li><strong>Community Support:</strong> Active player discussions and peer help</li>
+        </ul>
+      </div>
+
+      <div class="

@@ -32,7 +32,44 @@
   </script>
   
   <style>
-    /* === CSS Variables === */
+  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  nav {
+    background-color: #333;
+    padding: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul li {
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-family: Arial, sans-serif;
+  }
+  
+  nav ul li:hover {
+    border-bottom: 3px solid #4CAF50;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+  }
     :root {
       --primary-color: #00E7D0;
       --secondary-color: #FF6B6B;
@@ -968,6 +1005,14 @@
   </style>
 </head>
 <body>
+
+  <nav>
+  <ul>
+    <li><a href="page1.html">Home</a></li>
+    <li><a href="page2.html">About</a></li>
+    <li><a href="page3.html">Contact</a></li>
+  </ul>
+</nav>
   <!-- Animated Background -->
   <div class="background-container">
     <div class="animated-bg"></div>

@@ -193,6 +193,26 @@
       gap: 1rem;
     }
 
+    .nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.nav-link:active {
+  transform: scale(0.95);
+}
+
     .logo-container {
       position: relative;
       display: flex;
@@ -984,12 +1004,9 @@
         <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" alt="Jalwa Game Logo" class="logo" onerror="this.style.display='none';">
       </div>
       <nav class="header-nav" aria-label="Main navigation">
-        <a href="https://jalwaclub3.com/#/register?invitationCode=568556452044" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer" aria-label="Login to Jalwa Game">
-          <span class="btn-text">Login</span>
-        </a>
-        <a href="https://jalwaclub3.com/#/register?invitationCode=568556452044" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" aria-label="Register for Jalwa Games">
-          <span class="btn-text">Register</span>
-        </a>
+        <a href="#home" onclick="showPage('home')" class="nav-link">Home</a>
+        <a href="#privacy" onclick="showPage('privacy')" class="nav-link">Privacy</a>
+        <a href="#terms" onclick="showPage('terms')" class="nav-link">Terms</a>
       </nav>
     </div>
   </header>

@@ -29,6 +29,28 @@
     "url": "https://jalwaclub3.com",
     "logo": "https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png"
   }
+
+
+    // Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+
+function closeMenu() {
+  hamburger.classList.remove('active');
+  navMenu.classList.remove('active');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+    closeMenu();
+  }
+});
   </script>
   
   <style>
@@ -193,13 +215,45 @@
       gap: 1rem;
     }
 
-    .nav-link {
+    /* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.hamburger-menu .line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger-menu.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Navigation Links */
+.nav-link {
   color: var(--text-light);
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  position: relative;
   transition: all 0.3s ease;
   border-bottom: 3px solid transparent;
 }
@@ -209,9 +263,44 @@
   border-bottom-color: var(--primary-color);
 }
 
-.nav-link:active {
-  transform: scale(0.95);
-}
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+  
+  .header-nav {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background: rgba(10, 15, 28, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 2rem 0;
+    border-left: 1px solid var(--border-glow);
+    transition: right 0.3s ease;
+    gap: 0;
+  }
+  
+  .header-nav.active {
+    right: 0;
+  }
+  
+  .nav-link {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 3px solid transparent;
+  }
+  
+  .nav-link:hover {
+    background: rgba(0, 231, 208, 0.1);
+    border-left-color: var(--primary-color);
+    border-bottom-color: transparent;
+  }
 
     .logo-container {
       position: relative;
@@ -1003,10 +1092,19 @@
       <div class="logo-container">
         <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/other/h5setting_20250315141734j61m.png" alt="Jalwa Game Logo" class="logo" onerror="this.style.display='none';">
       </div>
-      <nav class="header-nav" aria-label="Main navigation">
-        <a href="#home" onclick="showPage('home')" class="nav-link">Home</a>
-        <a href="#privacy" onclick="showPage('privacy')" class="nav-link">Privacy</a>
-        <a href="#terms" onclick="showPage('terms')" class="nav-link">Terms</a>
+      
+      <!-- Hamburger Menu Button -->
+      <button class="hamburger-menu" id="hamburger" aria-label="Menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      
+      <!-- Navigation Menu -->
+      <nav class="header-nav" id="navMenu" aria-label="Main navigation">
+        <a href="#home" onclick="showPage('home'); closeMenu()" class="nav-link">Home</a>
+        <a href="#privacy" onclick="showPage('privacy'); closeMenu()" class="nav-link">Privacy</a>
+        <a href="#terms" onclick="showPage('terms'); closeMenu()" class="nav-link">Terms</a>
       </nav>
     </div>
   </header>
